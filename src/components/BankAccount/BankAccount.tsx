@@ -8,7 +8,7 @@ import {
   Icon,
   Button,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const transactions = [
   { id: 1, name: "Netflix", amount: "-£9.99", date: "2024-12-01" },
@@ -16,7 +16,7 @@ const transactions = [
 ];
 
 export default function BankAccount() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <Box bg="black" minH="100vh" p={6}>
@@ -39,7 +39,7 @@ export default function BankAccount() {
         {transactions.map((transaction) => (
           <HStack key={transaction.id} justifyContent="space-between" py={3}>
             <HStack>
-              <Icon boxSize={5} color="black" />
+              <Icon boxSize={5} color="black" /> {/* Add an appropriate icon */}
               <Text fontWeight="bold">{transaction.name}</Text>
             </HStack>
             <Text color="black" fontWeight="bold">
@@ -48,7 +48,7 @@ export default function BankAccount() {
           </HStack>
         ))}
       </Box>
-      <Button colorScheme="teal" mt={6} onClick={() => navigate("/bills")}>
+      <Button colorScheme="teal" mt={6} onClick={() => router.push("/bills")}>
         Manage Bills
       </Button>
     </Box>
