@@ -23,7 +23,7 @@ import {
     const toast = useToast();
     const router = useRouter();
   
-    const handleInputChange = (e) => {
+    const handleInputChange = (e : any) => {
       const { name, value, type, checked } = e.target;
       setReminder((prev) => ({
         ...prev,

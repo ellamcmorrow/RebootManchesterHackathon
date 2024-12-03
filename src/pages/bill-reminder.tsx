@@ -181,7 +181,7 @@ export default function ReminderPage() {
               <Input
                 name="title"
                 value={reminder.title}
-                onChange={(e) =>
+                onChange={(e : any) =>
                   setReminder({ ...reminder, title: e.target.value })
                 }
               />
@@ -192,7 +192,7 @@ export default function ReminderPage() {
                 type="date"
                 name="date"
                 value={reminder.date}
-                onChange={(e) =>
+                onChange={(e : any) =>
                   setReminder({ ...reminder, date: e.target.value })
                 }
               />
@@ -202,7 +202,7 @@ export default function ReminderPage() {
               <Select
                 name="category"
                 value={reminder.category}
-                onChange={(e) =>
+                onChange={(e : any) =>
                   setReminder({ ...reminder, category: e.target.value })
                 }
               >
