@@ -18,7 +18,6 @@ type Routes = {
 const Home: NextPage = () => {
   const routesArr: Routes[] = [
     { text: "Bill Reminder", route: "bill-reminder" },
-    { text: "fetch", route: "fetch-example" },
   ];
 
   return (
